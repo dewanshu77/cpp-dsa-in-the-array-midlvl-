@@ -1,0 +1,2072 @@
+// class Solution {
+// public:
+//     vector<vector<int>> threeSum(vector<int>& nums) {
+        
+// sort(nums.begin(),nums.end());
+// vector<vector<int>> triplet;
+
+
+
+// for (int i = 0; i < nums.size(); i++)
+// {    int rptr=nums.size()-1;
+// int lptr=i+1;
+//  if(i>0 && nums[i-1]==nums[i]){
+//     continue;
+//     }
+    
+    
+   
+
+// while(lptr<rptr){
+
+   
+//    /* code */int ith=nums[i];
+// int sum=ith+nums[lptr]+nums[rptr];
+//    if (sum==0)
+//    {
+//       vector <int > temp;
+//       temp.push_back(ith);
+//             temp.push_back(nums[lptr]);
+//       temp.push_back(nums[rptr]);
+
+//       /* code */triplet.push_back(temp);
+// lptr++;
+// rptr--;
+// while(lptr<rptr && nums[lptr]==nums[lptr-1]){
+//     lptr++;
+// }
+      
+
+//    }
+
+//    if (sum>0)
+//    {
+//       /* code */
+
+//       rptr--;
+//    }
+//    if (sum<0)
+//    {
+//       /* code */lptr++;
+//    }
+   
+   
+
+
+
+
+// }
+// }
+
+
+
+// return triplet;
+//     }
+// };
+#include <iostream>
+#include <set>
+
+
+using namespace std;
+
+// class Solution {
+// public:
+//     vector<vector<int>> threeSum(vector<int>& nums) {
+//         sort(nums.begin(), nums.end());
+//         vector<vector<int>> triplet;
+
+//         for (int i = 0; i < nums.size(); i++) {
+//             int rptr = nums.size() - 1;
+//             int lptr = i + 1;
+//             if (i > 0 && nums[i-1] == nums[i]) continue;
+
+//             while (lptr < rptr) {
+//                 int sum = nums[i] + nums[lptr] + nums[rptr];
+//                 if (sum == 0) {
+//                     triplet.push_back({nums[i], nums[lptr], nums[rptr]});
+//                     lptr++;
+//                     rptr--;
+//                     while (lptr < rptr && nums[lptr] == nums[lptr-1]) lptr++;
+//                 } else if (sum > 0) {
+//                     rptr--;
+//                 } else {
+//                     lptr++;
+//                 }
+//             }
+//         }
+//         return triplet;
+//     }
+// };
+
+// int main() {
+//     Solution sol;
+//     vector<int> nums = {-1, 0, 1, 2, -1, -4};
+//     auto result = sol.threeSum(nums);
+
+//     cout << "Triplets that sum to zero:\n";
+//     for (auto &trip : result) {
+//         cout << "[ ";
+//         for (int x : trip) cout << x << " ";
+//         cout << "]\n";
+//     }
+//     return 0;
+// }
+// #include<iostream>
+// using namespace std;
+// // vector<int> reverse_o(vector<int>,int number){
+// // //base case
+
+
+// // }
+// int main(){
+// vector<int> arr={10,20,30,40};
+// //tpa
+// string n="A man, a plan, a canal: Panama";
+// string ho;
+// ho.clear();
+// for (char c: n){
+// if (isalnum(c))
+// { 
+//     ho.push_back(static_cast<char>(std::tolower(static_cast<unsigned char>(c))));
+//     /* code */
+// }
+// }
+// cout<<ho;
+// int lptr=0;
+// int rptr=ho.length()-1;
+// while (lptr<rptr)
+// {
+//     if (ho[lptr]!=ho[rptr])
+//     {cout<<"not palindrome";return 0;
+//         /* code */
+//     }
+//     lptr++;rptr--;
+//     /* code */
+// }
+// cout<<"palindrome";
+// return 0;
+// }
+
+
+// class Solution {
+// public:
+//     int fib(int n) {
+//         if (n<=1)
+//         {return n;
+//             /* code */
+//         }
+//         int prev=0,rside=1,answer=0,f_answer;//<<<<<
+//         for (int i = 1; i < n; i++)
+//         {
+
+//             f_answer=rside+prev;//<<<<<
+//        cout<<f_answer<<endl;//<<<<
+//        prev=rside;
+//        rside=f_answer;
+//         //<<<<
+        
+//             /* code */
+//         }
+//         return f_answer;
+        
+        
+//     }
+   
+// };
+// int main(){
+//     Solution sol;
+//     int x= sol.fib(6);
+//     cout<<x;
+// }
+
+//factorial of number recursive
+// class solution {
+
+//     public:
+//     int fact(int number ){
+//         if (number==0)
+//         {
+//             /* code */return 1;
+//         }
+//         return number*(fact(number-1));
+        
+//     }
+
+
+
+// };
+// int main(){
+// solution obj;
+// cout<<obj.fact(5);
+
+
+// }
+
+//Palindrome valid:non-recursive:--------------------------------------------------LEETCODE UPLOAD-----------------------------
+// class solution {
+
+//     public:
+//    bool stringpalindrome(string s ){
+//       int lptr=0;
+//       int rptr=s.length()-1;
+//       while (lptr<rptr)
+//       {
+//         /* code */
+//         if (!isalnum(s[lptr]))
+//         {cout<<"1\n";
+//             /* code */lptr++;
+//         }
+//         else if (!isalnum(s[rptr]))
+//         {cout<<"2\n";
+//             /* code */rptr--;
+//         }
+//        else{ 
+//         if (tolower(s[lptr])!=tolower(s[rptr]))
+//         {cout<<"4"<<endl;
+//             cout<<(char)tolower(s[lptr])<<endl;
+//             cout<<(char)tolower(s[rptr]);
+//             /* code */return false;
+//         }
+//         lptr++;rptr--;
+//     }
+//       }
+//       return true;
+        
+//     }
+
+
+
+// };
+// int main(){
+// solution obj;
+// if (obj.stringpalindrome("1 g G1")==true)
+// {
+//     /* code */cout<<"palindrome";
+// }
+// else{
+//         /* code */cout<<"not palindrome";
+
+// }
+
+
+// }
+
+
+//Palindrome valid:-recursive:--------------------------------------------------LEETCODE UPLOAD-----------------------------
+
+// class solution {
+
+//     public:
+//    bool stringpalindrome(string s ,int lptr,int rptr){
+      
+//       if (lptr>=rptr)
+//       {
+//         return true;
+//         /* code */
+//       }
+//          if (!isalnum(s[lptr]))
+//       {lptr++;
+//         /* code */
+//       } 
+//       else if (!isalnum(s[rptr]))
+//       {rptr--;
+//         /* code */
+//       }
+//       else{
+//         if (tolower(s[lptr])!=tolower(s[rptr]))
+//         {
+//             /* code */return false;
+//         }
+        
+        
+//       }
+
+      
+      
+//         return stringpalindrome(s,lptr+1,rptr-1);
+//     }
+
+
+
+// };
+// int main(){
+// solution obj;
+// string s ="BAB";
+// if (obj.stringpalindrome(s,0,s.length()-1)==true)
+// {
+//     /* code */cout<<"palindrome";
+// }
+// else{
+//         /* code */cout<<"not palindrome";
+
+// }
+
+
+// }
+
+
+//Fibonacci series :non-recursive:--------------------------------------------------LEETCODE UPLOAD-----------------------------
+// class sol{
+// public:
+// vector<int> series={0,1};
+// int fib(int n){
+// if (n==0)
+// {return 0;
+//     /* code */
+// }
+// else if (n==1)
+// {return 1;
+//     /* code */
+// }
+// else{
+// int counter=n;
+// int prev=0,forward=1;
+// while (counter>1 )
+// {
+//     series.push_back(series[prev]+series[forward]);
+//     counter--;prev++;forward++;
+//     /* code */
+// }
+// for (int i : series)
+// {cout<<i<<endl;
+//     /* code */
+// }
+// return 2;
+// }
+
+
+
+
+// }
+
+
+// };
+// int main(){
+
+// sol obj;
+// obj.fib(6);    
+    
+// }
+
+//Fibonacci series :non-recursive:--------------------------------------------------LEETCODE UPLOAD-----------------------------
+// class sol{
+// public:vector<int> series={0,1};
+// int fib(int n,int i,int j){
+// if (n==1)
+// {
+//     for (int i: series)
+//     {cout<<i;
+//         /* code */
+//     }
+    
+//     return 1;
+//     /* code */
+// }
+// else{
+//     int k=i+j;
+// series.push_back(k);
+// fib(n-1,j,k);
+// }
+// return 541;
+// }
+
+
+//  };
+// int main(){
+
+// sol obj;
+// int n=6;
+// if (n==0)
+// {cout<<"0";return 01;
+//     /* code */
+// }
+// else if (n==1)
+// {cout<<"1";return 1;
+//     /* code */
+// }
+// obj.fib(n,0,1);    
+
+    
+// }
+
+//Hashmap :non-recursive:--------------------------------------------------LEETCODE UPLOAD-----------------------------
+
+// class sol{
+//     public:
+//    int func(int array_maxele,int hash_in[],int (&query_in)[13]){
+//     int output[13]={0};
+   
+//    for(int q : query_in){
+//    int count =0;
+//     for (int i = 0; i < array_maxele; i++)
+//     {
+//         if (hash_in[i]==q)
+//         {count+=1;
+//             /* code */
+//         }
+//         /* code */
+//     }
+//     output[q]=count;
+   
+//    }
+//    for(int i : output){
+//     cout<<i<<endl;
+//    }
+//    return 0;
+// }
+   
+
+// };
+// int main(){
+//     int hash[5]={0,1,2,2,1};
+//     int query[13]={0,1,2,12};
+//    int  arraylen=5;
+//    sol obj;
+//    obj.func(arraylen,hash,query);
+// }
+
+//integer hashing  ---------------------------------------Better-----------
+// int main(){
+//     int hash[13]={0};
+//     int length=0;
+//     cin>>length;
+//     int arr[length];
+//     for (int i = 0; i < length; i++)
+//     {cin>>arr[i];
+//     }
+//     for (int i = 0; i < length; i++)
+//     {hash[arr[i]]+=1;
+//         /* code */
+//     }
+//     for (int i = 0; i < 13; i++)
+//     {cout<<endl<<hash[i];
+//         /* code */
+//     }
+    
+    
+// }
+////char hashing  ---------------------------------------Better-----------
+
+// 1. only lower/uppercase
+// int main(){
+// string s="abcabmnzc";
+// int hashh[26]={0};
+// for (char c : s)
+// {
+//     hashh[c-'a']+=1;//for capital whole string use 'A'
+//     /* code */
+// }
+// for (int i : hashh)
+// {cout<<i<<" ";
+//     /* code */
+// }
+// }
+
+// 2. mixed
+// int main(){
+// string s="Abcabmnzc";
+// int hashh[256]={0};
+// for (int i =0;i<s.length();i++){
+//     hashh[s[i]]+=1;
+
+// }
+// char q;
+// while(cin>>q){
+    
+//     cout<<hashh[q];
+
+// }
+// }
+
+
+////Selection sort Algorithm  ---------------------------------------------------
+// void func(int x[6],int l){
+// for (int i = 0; i < 6; i++)
+// {
+//     // int lhs_first=x[i];
+
+
+//     for (int j = i+1; j < 6; j++)
+//     {
+//         if (x[j]<x[i])
+//         {int temp=x[i];
+//             /* code */x[i]=x[j];x[j]=temp;
+//         }
+        
+//         /* code */
+//     }
+    
+// }
+
+// for (int c = 0; c < 6; c++)
+// {cout<<x[c]<<" ";
+//     /* code */
+// }
+
+
+
+// }
+// int main(){
+//     int arr[]={13,46,24,52,20,9};
+//     int length=6;
+//      func(arr,length);
+    
+    
+// }
+
+////Bubble sort Algorithm  ---------------------------------------------------
+
+
+// void func(int x[],int n){
+// for (int outer_ptr = n-1; outer_ptr >= 0; outer_ptr--)
+// {int didswap=0;//
+//     for (int bubble_pointer  = 0; bubble_pointer <= outer_ptr-1; bubble_pointer++)
+//     {
+//         if (x[bubble_pointer]>x[bubble_pointer+1])
+//         {
+//             swap(x[bubble_pointer],x[bubble_pointer+1]);
+//             didswap=1;
+//             /* code */
+//         }
+        
+
+//     }
+//     if (didswap==1)//optimization for what if array is already sorted why to iterate then
+//     {break;
+//         /* code */
+//     }
+    
+
+
+//     /* code */
+// }
+
+
+
+
+// }
+
+
+
+//  int main(){
+//     int arr[]={13,46,24,52,20,9};
+//     int length=6;
+//      func(arr,length);
+//     for (int c = 0; c < 6; c++){
+// cout<<arr[c]<<" ";}
+//     /* code */
+// }
+    //recheck code approach
+    
+////Insertion sort Algorithm my approach ---------------------------------------------------
+
+
+
+// void func_insertion(int x[],int size){
+// for (int o = 1; o <= size; o++)
+// {if (x[o]==9)
+// {cout<<"tracker";
+//     /* code */
+// }
+
+
+//     for (int i = o-1; i >=0; i--)
+//     {bool swappindone= false;
+//         if (x[o]<x[i] && i==o-1)
+//         {
+//             swap(x[o],x[i]);
+//             swappindone=true;
+            
+//         cout<<"swap"<<x[o]<<"&"<<x[i]<<endl;
+
+//         }
+
+//         else if (x[i]<x[i-1] && i!=0)
+//         { swap(x[i],x[i-1]);
+//       cout<<"2nd:"<<"swap"<<x[i-1]<<"&"<<x[i]<<endl;
+//         }
+//     }
+// }
+// }
+//  int main(){
+//     int arr[]={13,46,24,52,20,9};
+//     int length=6;
+//      func_insertion(arr,length);
+//     for (int c = 0; c < 6; c++){
+// cout<<arr[c]<<" ";}
+//     /* code */
+// }
+
+
+
+////Insertion sort Algorithm correct  approach  follow this---------------------------------------------------
+
+// class Solution {
+// public:
+//     // Function to sort the array using insertion sort
+//     vector<int> insertionSort(vector<int>& nums) {
+//        int maxsize=nums.size()-1;
+//         for (int  i = 1; i <= maxsize; i++)
+//         {
+//             int key=nums[i];//choosing number
+//             int j=i-1;//pointer at prev index to key
+
+//             while (j>=0 && nums[j]>key)//check if prev numbers >key
+//             {
+//                 nums[j+1]=nums[j];//shift the preceding elemnt at 1 index ahead : by copying it
+//                 /* code */
+//                                   // in first run keys position value gets overwritten by preceding elemtn
+//                                   //then as we go deep the deeper elemnts start copying into original of previously copied values
+//                 j--;
+//             }
+
+//             //once all the shifting done we will insert key
+
+//             nums[j+1]=key;//if nums[j]<key we insert key at original of last copied value
+//         }
+//        return nums; 
+//     }
+// };
+
+// int main(){
+//     Solution obj;               
+//     vector<int> b={13,46,24,52,20,9};
+//      obj.insertionSort(b);
+// for (int i: b)
+// {cout<<i<<" ";
+//     /* code */
+// }
+// }
+
+
+
+
+
+
+
+////Merge sort Algorithm   ---------------------------------------------------
+
+// class Solution{
+// public:
+// void merge(vector<int> &arr,int low,int mid,int high){
+//     int left=low;
+//     int right=mid+1;
+//     vector<int> temp;
+//     while (left<=mid && right<= high)
+//     {
+//         if (arr[left]<arr[right])
+//         {temp.push_back(arr[left]);
+//             left++;
+//             /* code */
+//         }
+//         else{
+//             temp.push_back(arr[right]);right++;
+//         }
+
+
+
+
+//         /* code */
+//     }
+//     while (left<=mid)
+//     {
+//         /* code */temp.push_back(arr[left]);
+//             left++;
+//     }
+//     while (right<= high)
+//     {
+//         /* code */temp.push_back(arr[right]);
+//             right++;
+//     }
+    
+//     for (int i=low ; i <= high; i++)
+//     {
+//         arr[i]=temp[-low+i];
+
+//         /* code */
+//     }
+    
+
+
+
+// }
+
+
+
+
+// int mergesort(vector<int> & arr,int low ,int high){
+// if (low>=high)
+// {
+//     /* code */return 0;
+// }
+
+// int mid=(low+high)/2;
+
+// mergesort(arr,low,mid);
+
+// mergesort(arr,mid+1,high);
+
+// merge(arr,low,mid,high);
+// return 0;
+
+// }
+
+
+
+
+// };
+
+// int main() {
+//     vector<int> arr = {5, 2, 8, 4, 1};
+//     Solution sol;
+//     sol.mergesort(arr, 0, arr.size() - 1);
+//     for (int x : arr)
+//         cout << x << " ";
+//     cout << endl;
+//     return 0;
+// }
+
+
+////Bubble sort Algorithm Recursive optimized approach ---------------------------------------------------
+
+
+// class Solution{
+// public:
+// void bubblesort(vector<int> &arr,int last_index){
+// if (last_index==0 )
+// { return ;
+//     /* code */
+// }
+// bool didswap=false;
+// for (int i = 0; i < last_index; i++)
+// {
+//     if (arr[i]>arr[i+1])
+//     {
+        
+//         cout<<last_index<<"&"<<i<<endl;
+//         cout<<"swapped"<<arr[i]<<" & "<<arr[i+1]<<endl;
+//         swap(arr[i],arr[i+1]);
+//         for (int x : arr){
+//         cout << x << " ";}
+//         cout<<endl;
+//         didswap=true;
+//         /* code */
+//     }
+    
+//     /* code */
+// }
+
+// if (didswap==false)
+// {
+//     /* code */return;
+// }
+
+// last_index--;
+
+// bubblesort(arr, last_index);
+// }
+// };
+// int main() {
+//     vector<int> arr = {5, 2, 8, 4, 1};
+//     Solution sol;
+//     sol.bubblesort(arr, arr.size() - 1);
+//     for (int x : arr)
+//         cout << x << " ";
+//     cout << endl;
+//     return 0;
+// }
+
+////Insertion sort Algorithm using 2for loops approach ---------------------------------------------------
+
+// class Solution{
+//     public:
+
+//     void insertion_sort(vector<int> &arr,int last_index)
+// {
+// for (int i = 1; i <=last_index; i++)
+// {
+    
+//     int key=arr[i];
+//  int x;
+
+//     for ( x=i-1; x >= 0; x--)
+//     {
+//         if (arr[x]>key)
+//         {
+//             arr[x+1]=arr[x];
+//             /* code */
+//         }
+//         else{
+//             break;
+//         }
+       
+//     }
+//     arr[x+1]=key;
+    
+//     /* code */
+
+
+
+
+// }
+
+
+// }
+// };
+
+//  int main() {
+//     vector<int> arr = {5, 2, 8, 4, 1};
+//     Solution sol;
+//     sol.insertion_sort(arr, arr.size() - 1);
+//     for (int x : arr)
+//         cout << x << " ";
+//     cout << endl;
+//     return 0;
+// }
+
+
+//insertion  using recursion________________________
+// class Solution{
+
+//     public:
+//     void func(vector<int> &arr,int last_index){
+//         for (int i = 1; i <= last_index; i++)
+//         {
+//             int key=arr[i];
+//             int j=i-1;
+//             innerloop(arr,key,j);
+//             arr[j+1]=key;
+
+
+
+
+//             /* code */
+//         }
+        
+
+
+
+//     }
+//     void innerloop(vector<int> & arr,int key, int &j){
+//             if(j<0){
+//                 return;
+//             }
+
+//             if (arr[j]>key)
+//             {arr[j+1]=arr[j];
+//                 /* code */
+//             }
+//             else{
+//                 return;
+//             }
+            
+//             j--;
+//             innerloop(arr,key,j);
+
+
+
+//     }
+// };
+
+// int main() {
+//     vector<int> arr = {5, 2, 8, 4, 1};
+//     Solution sol;
+//     sol.func(arr, arr.size() - 1);
+//     for (int x : arr)
+//         cout << x << " ";
+//     cout << endl;
+//     return 0;
+// }
+
+
+
+
+//qs
+
+
+// class Solution {
+// public:
+//     // Function to perform quicksort
+//     void quickSort(vector<int>& arr, int low, int high) {
+//         // Base case: if low is not less than high
+//         if (low < high) {
+//             // Find pivot index after partitioning
+//             int pivotIndex = partition(arr, low, high);
+
+//             // Recursively sort elements before pivot
+//             quickSort(arr, low, pivotIndex - 1);
+
+//             // Recursively sort elements after pivot
+//             quickSort(arr, pivotIndex + 1, high);
+//         }
+//     }
+
+//     // Function to partition the array
+//     int partition(vector<int>& arr, int low, int high) {
+//         // Choose the last element as pivot
+//         int pivot = arr[high];
+
+//         // Initialize i to place smaller elements
+//         int i = low - 1;
+
+//         // Traverse the array
+//         for (int j = low; j < high; j++) {
+//             // If element is smaller than or equal to pivot
+//             if (arr[j] <= pivot) {
+//                 // Increment i and swap with j
+//                 i++;
+//                 swap(arr[i], arr[j]);
+//             }
+//         }
+
+//         // Place pivot in correct position
+//         swap(arr[i + 1], arr[high]);
+
+//         // Return pivot index
+//         return i + 1;
+//     }
+// };
+
+// int main() {
+//     // Sample array
+//     vector<int> arr = {10, 7, 8, 9, 1, 5};
+
+//     // Create solution object
+//     Solution sol;
+
+//     // Apply quicksort
+//     sol.quickSort(arr, 0, arr.size() - 1);
+
+//     // Print sorted array
+//     for (int num : arr)
+//         cout << num << " ";
+    
+//     return 0;
+// }
+
+
+//lets write quick sort 
+// class Solution{
+// public:
+// int partition (vector<int> &arr,int low,int end){
+//     int partiton_num=arr[low];
+//     int current_func_partinx=low;
+// while (low<end)
+// {
+//     while (arr[low]<=partiton_num)
+//     {
+//         /* code */low++;
+//     }
+//     while (arr[end]>partiton_num)
+//     {
+//         /* code */end--;
+//     }
+//     if (low<end)
+//     {
+//         /* code */swap(arr[low],arr[end]);
+//     }
+    
+    
+//     /* code */
+// }
+
+// swap(arr[current_func_partinx],arr[end]);
+// return end;
+
+
+
+// }
+
+
+// void quickSort(vector<int> &arr,int low,int end){
+// //lets decide base case afterwards
+
+
+// if (low>end)
+// {
+// return;
+// }
+
+// int partition_indx=partition(arr, low, end);
+// quickSort(arr, low, partition_indx-1);
+// quickSort(arr,partition_indx+1,end);
+
+// }
+
+// };
+
+
+// class Solution{
+// public:
+
+// void qs(vector<int> & arr,int low,int high){
+//  if (low>=high)//at last=high we get out of recursion call as we have just 1 element so cant compare it with any num in its partition
+//  {return; }
+//  cout<<"exit"<<endl;
+//     int partition_index=partition(arr,low,high);
+//     qs(arr,low,partition_index-1);
+//     qs(arr,partition_index+1,high);
+//     /* code */
+ 
+
+
+// }
+
+// // quick sort one more time//with descending order
+// int partition(vector<int> &arr,int low,int high){
+//     cout<<low<<endl;
+//     int i=low;
+//     int j=high;
+//   while ( i<j)
+//     {while (arr[i]>arr[low] && i<=high-1 )
+//     {cout<<"while1"<<endl;i++;
+//         /* code */
+//     }
+//     while (arr[j]<=arr[low] && j>=low+1)
+//     {cout<<"while2"<<endl;j--;
+//         /* code */
+//     }
+//     if (i<j)
+//     {
+//         /* code */swap(arr[j],arr[i]);
+//     }
+    
+    
+//     }
+//     swap(arr[j],arr[low]);
+//     return j;   
+// }
+
+// };
+
+// int main(){
+//     Solution sol;              
+// vector <int> arr={10, 7, 8, 9, 1, 15};
+// sol.qs(arr,0,arr.size()-1);
+//   for (int num : arr)
+//          cout << num << " ";
+
+// }
+
+
+// Q.S tried by myself then checked solution then did it:Hoarse partition method
+
+// class Solution{
+// public:
+// void qs(vector<int> &arr,int low,int high ){
+
+//     if (low<high)
+//     {int pivotpoint=partition(arr,low,high);
+//         qs(arr,low,pivotpoint-1);
+//         qs(arr,pivotpoint+1,high);
+//         /* code */
+//     }
+//     else{
+//         return;
+//     }
+// }
+
+// int partition(vector<int> &arr,int low,int high){
+// int i=low;int j=high ;
+
+// while(i<j){
+// while (arr[i]<=arr[low] && i<=j)
+// {i++;
+// }
+// while (arr[j]>arr[low] && i<=j)
+// {j--;
+//     /* code */
+// }
+// if(i<j){
+// swap(arr[j],arr[i]);}
+// }
+// swap(arr[low],arr[j]);
+// return j;
+// }
+
+
+
+// };
+// int main(){
+//     Solution sol;              
+// vector <int> arr={10, 7, 15};
+
+// sol.qs(arr,0,arr.size()-1);
+//   for (int num : arr)
+//          cout << num << " ";
+
+// }
+
+//Lamuto partition scheme
+
+// class Solution{
+// public:
+//  void qs(vector<int> &arr,int low,int high ){
+
+//     if (low<high)
+//     {int pivotpoint=partition(arr,low,high);
+//         qs(arr,low,pivotpoint-1);
+//         qs(arr,pivotpoint+1,high);
+//         /* code */
+//     }
+//     else{
+//         return;
+//     }
+// }
+
+// int partition(vector<int> &arr,int low,int high){
+// int i=low;
+
+// for (int j=low; j <= high-1; j++)
+// {
+
+// if (arr[j]<=arr[high])
+// {
+//     /* code */swap(arr[j],arr[i]);
+//     i++;
+// }
+
+
+
+
+// }
+// swap(arr[i],arr[high]);
+
+// return i;
+
+
+
+// }             
+
+
+// };
+
+
+// int main(){
+//     Solution sol;              
+// vector <int> arr={1, 7, 15,67,5,12};
+// sol.qs(arr,0,arr.size()-1);
+//   for (int num : arr)
+//          cout << num << " ";
+
+// }
+
+//Array basic questions
+//---Easy
+// int main(){
+// vector<int> arr={1, 7, 15,67,5,12};
+// int max=arr[0];
+// for (int i = 1; i < arr.size(); i++)//optimal approach is this brAPP is to use sort function and return last elemnt
+// {
+//     if (arr[i]>max)
+//     {max=arr[i];
+//         /* code */
+//     }
+    
+//     /* code */
+// }
+// cout<<max;
+
+// }
+
+// int main(){
+// vector<int> arr={1, 7, 15,67,5,12};
+// int max=INT_MIN;
+// int max_1=INT_MIN;
+// int min=INT_MAX;
+// int min_1=INT_MAX;
+// for (int i = 0; i < arr.size(); i++)//optimal approach is this brAPP is to use sort function and return last elemnt
+// {
+//     if (arr[i]>max)
+//     {   max_1=max;
+//         max=arr[i];
+        
+//         /* code */
+//     }
+//     else if(arr[i]>max_1 ){
+
+//     }
+//     if (arr[i]<min)
+//     {min_1=min;
+//         min=arr[i];
+//         /* code */
+//     }
+//     else if(arr[i]<min_1){
+//         min_1=arr[i];
+        
+//     }
+    
+//     // else if (max-arr[i]<max-max_1)
+//     // {max_1=arr[i];
+//     //     /* code */        cout<<max_1<<endl<<min_1<<endl<<endl;
+
+//     // }
+//     // if (arr[i]<min)
+//     // {min=arr[i];
+//     //     /* code */        cout<<max_1<<endl<<min_1<<endl<<endl;
+
+//     // }
+//     // else if (arr[i]-min<-min+min_1)
+//     // {min_1=arr[i];
+//     //     /* code */        cout<<max_1<<endl<<min_1<<endl<<endl;
+
+//     // }
+
+    
+    
+    
+//     /* code */
+// }
+// cout<<max_1<<endl<<min_1<<endl<<endl;
+
+// }
+
+// int main(){
+// vector<int> arr={1,2,3,4,5};
+// int high=arr.size()-1;
+// bool didswp=false;
+// int x=0;
+// while(high>=1){
+//      didswp=false;
+// for (int i = 0; i <high ; i++)
+// {
+//     if (arr[i]>arr[i+1])
+//     {swap(arr[i],arr[i+1]);
+//     didswp=true;x=1;
+//         /* code */
+//     }
+    
+
+//     /* code */
+// }
+// if (didswp==true)
+// {
+// break;}
+
+// high--;
+// }
+
+// if (x==1)
+// {
+//     /* code */
+//     cout<<"false";
+// }
+// else{
+//     cout<<"true";
+// }
+
+
+// }
+
+// int main(){
+// vector<int> arr={1,2,2,2,3,3};
+// unordered_set <int> seen;
+// int j=1;
+// int temp=arr[0];
+// for ( int i=1; i < arr.size(); i++)
+// {if (arr[i]!=temp)
+// {arr[j]=arr[i];
+//     temp=arr[j];
+//     j++;
+//     /* code */
+// }   /* code */
+// }
+// for (int m : arr)
+// {cout<<m;}
+// return j;
+// }
+
+// int main(){//creating new array method
+// vector<int> arr={-1, 0, 3, 6};
+// int f=arr[0];
+// vector<int> arn={};
+// for (int i = 1; i < arr.size(); i++)
+// {arn.push_back(arr[i]);
+//     /* code */
+// }
+// arn.push_back(f);
+// for(int v:arn){cout<<v;}
+
+// }
+
+//move zero to end
+// class Solution {
+// public:
+//     void moveZeroes(vector<int>& nums) {
+       
+
+// int dec=nums.size()-1;
+// int zero_counter=0;
+//         for (int i = 0; i < nums.size()-1; i++)
+//         {
+//             if(nums[i]==0){
+//             for (int j = i; j <dec; j++)
+//             {
+//                 if (nums[j+1]==0 && j==i)
+//                 {i--;
+//                     /* code */
+//                 }
+                
+
+//                 swap(nums[j],nums[j+1]);
+
+
+                
+//             }
+//             dec--;
+//         }
+//         }
+
+
+
+
+// int j=-1;
+// for (int t = 0; t < nums.size()-1; t++)//finding of 0 holder
+// {
+//     if (nums[t]==0)
+//     {j=t;
+//         break;
+
+//         /* code */
+//     }
+    
+//     /* code */
+// }
+// if (j==-1)//no o's case
+// {return ;
+//     /* code */
+// }
+
+
+// for (int i = j+1; i < nums.size(); i++)
+// {
+//     if (nums[i]!=0)
+//     {for(int v:nums){cout<<v;}
+//     cout<<endl;
+//     swap(nums[i],nums[j]);
+// for(int v:nums){cout<<v;}
+//         j++;cout<<endl<<j<<" "<<i+1<<endl;
+
+//         /* code */
+//     }
+    
+
+
+//     /* code */
+// }
+
+
+
+
+
+//             }
+//         } ;
+        
+
+
+
+ 
+// int main(){//creating new array method
+// vector<int> arr={1 ,0 ,2 ,3 ,0 ,4 ,0 ,1};
+// Solution obj;
+// obj.moveZeroes(arr);
+// for(int v:arr){cout<<v;}
+
+// } 
+
+
+
+
+// class Solution {
+// public:
+//    int linear_search(vector <int> & arr,int num){
+
+//     for (int i = 0; i < arr.size(); i++)
+//     {
+//         if (arr[i]==num)
+//         {return i;
+
+//             /* code */
+//         }
+        
+//         /* code */
+//     }
+//     return -1;
+    
+
+
+//    } 
+
+//         } ;
+        
+
+
+
+ 
+// int main(){//creating new array method
+// vector<int> arr={1 ,0 ,2 ,3 ,0 ,4 ,0 ,1};
+// Solution obj;
+// int x=obj.linear_search(arr,0);
+// cout<<x;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+// int main(){//mapping method
+// vector<int> arr1={1 ,0 ,2 ,3 };
+// vector<int> arr2={5,6};
+// map<int,int> a;
+//   for (int i = 0; i < arr1.size(); i++)
+//   {  if (a[arr1[i]]<0)
+//   {a[arr1[i]]++;
+//     /* code */
+//   }
+  
+    
+//     /* code */
+//   }
+// for (int i = 0; i < arr2.size(); i++)
+// {if (a[arr2[i]]<0)
+//   {a[arr2[i]]++;
+//     /* code */
+//   }
+//     /* code */
+// }
+
+// for (auto i :a)
+// {cout<<i.first;
+//     /* code */
+// }
+
+    
+
+//     /* code */
+//   }
+// //set method
+// int main(){
+// vector<int> arr1={1 ,0 ,2 ,3 };
+// vector<int> arr2={5,6};
+//     set<int> a;
+// for (int i : arr1)
+// {a.emplace(i);
+//     /* code */
+// }
+// for (int i : arr2)
+// {a.insert(i);
+//     /* code */
+// }
+// vector <int> unio_n(a.begin(),a.end());
+// for (auto i : unio_n)
+// {cout<<i;
+//     /* code */
+// }
+
+
+// }
+
+
+//union of 2sorted arrays
+// int main(){
+//  int arr1[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+// int arr2[] = {2, 3, 4, 4, 5, 11, 12};
+// vector<int> b;
+// int m=10;
+// int n=7;
+// int i=0;
+// int j=0;
+// while (i<m && j<n)
+// {
+//     if (arr1[i]<arr2[j])
+//     {
+//         if (b.empty() || b.back()!= arr1[i])
+//         {b.push_back(arr1[i]);
+//             /* code */
+//         }
+//         i++;
+//         /* code */
+//     }
+//     else if (arr1[i]>arr2[j])
+//     {
+//         if (b.empty() || b.back()!= arr2[j])
+//         {b.push_back(arr2[j]);
+//             /* code */
+//         }j++;
+        
+//         /* code */
+//     }
+//     else{
+//         if (b.empty() || b.back()!= arr2[j])
+//         {b.push_back(arr2[j]);
+            
+//             /* code */
+//         }
+//         j++;
+//         i++;
+        
+//     }
+//     /* code */
+// }
+// while (i<m)
+// {
+//    if (b.empty() || b.back()!= arr1[i])
+//         {b.push_back(arr1[i]);
+//             /* code */
+//         };i++;
+    
+//     /* code */
+// }
+// while (j<n)
+// {
+//     if (b.empty() || b.back()!= arr2[j])
+//         {b.push_back(arr2[j]);
+//             /* code */
+//         };j++;
+    
+//     /* code */
+// }
+
+
+// for (int i : b)
+// {cout<<i;
+//     /* code */
+// }
+
+// }
+
+//using two loops
+// int main(){
+// int arr1[] = {1,2,3,5};
+// for (int i = 0; i < 9; i++)
+// {bool is=false;
+// for (int j = i+1; j < 9; j++)
+// {if (arr1[j]==arr1[i]+1)
+// {is=true;
+// }
+// }
+// if (is==false)
+// {cout<<arr1[i]+1;
+// break;
+// }
+// }
+// }
+
+//using mathematical approach:
+// int main(){
+// vector<int> arr1 = {1,2,3,5};
+// int sum_now=0;
+// int j=0;
+// for (int i = j; i < arr1.size(); i++)
+// {sum_now+=arr1[i];
+//     /* code */
+//     j++;  /* code */
+//     }
+    
+
+// j++;
+// int sum=j*(j+1)/2;
+// if (sum-sum_now!=0)
+// {cout<<sum-sum_now;
+//     /* code */
+// }
+// }
+
+//using xor
+// int main(){
+// vector<int> arr1 = {1,2,3,5};
+// int res=4;//as last n is missed out in following loop cleverly initialize res=n initially;
+// for (int i = 0; i < arr1.size()-1; i++)//-1 as n was already included
+// {res=res^(i+1)^arr1[i];
+//     /* code */
+// }
+// cout<<res;
+//           }
+
+//reattempted 2nd max and 2 smallest num
+// int main(){
+// vector<int> arr1 = {1,2,3,5};
+// int max_l=INT_MIN;
+// int max_sl=INT_MIN;
+// int low_l=INT_MAX;
+// int low_sl=INT_MAX;
+// //second largest
+// if (arr1.size()==1)
+// {return -1;
+//     /* code */
+// }
+
+// for (int i = 0; i < arr1.size(); i++)
+// {if (arr1[i]>max_l)
+// {    max_sl=max_l;
+// max_l=arr1[i];
+//     /* code */
+// }
+// else if(arr1[i]>max_sl && arr1[i]!=max_l){
+// max_sl=arr1[i];
+// }
+// if (arr1[i]<low_l)
+// {    low_sl=low_l;
+// low_l=arr1[i];
+//     /* code */
+// }
+// else if(arr1[i]<low_sl && arr1[i]!=low_l){
+// low_sl=arr1[i];
+// }
+
+
+
+//     /* code */
+// }
+// cout<<low_sl<<endl<<max_sl;
+
+
+
+// }
+
+//move 0 to end
+// int main(){
+// vector<int> arr1 = {1,0,2,0,3,5,0,0};
+// int max_=arr1.size();
+// int first_0=-1;
+// for (int i = 0; i < max_; i++)
+// {if (arr1[i]==0)
+// {first_0=i;
+//     break;
+//     /* code */
+// }  /* code */
+// }
+
+//     for (int i = first_0+1; i <=max_; i++)
+//     {
+//         if (arr1[i]!=0)
+//         {swap(arr1[i],arr1[first_0]);
+//             first_0++;
+//             /* code */
+//         }
+        
+   
+//     /* code */
+// }
+
+
+//  for (int i : arr1)
+// {cout<<i;
+// }
+// }
+
+//2nd max and small eleme
+// int main(){
+// vector<int> arr1 = {1,0,2,0,3,5,0,0};
+// int max_=arr1.size();
+// int maxm=INT_MIN;
+// int maxm_1=INT_MIN;
+// int minm=INT_MAX;
+// int minm_1=INT_MAX;
+// for (int i = 0; i < max_; i++)
+// {
+//     if (arr1[i]>maxm)
+//     {maxm_1=maxm;
+//         maxm=arr1[i];
+        
+//         /* code */
+//     }
+//     else if (arr1[i]>maxm_1 && arr1[i]!=maxm)
+//     {maxm_1=arr1[i];
+//         /* code */
+//     }
+//      if (arr1[i]<minm)
+//     {minm_1=minm;
+//         minm=arr1[i];
+        
+//         /* code */
+//     }
+//     else if (arr1[i]<minm_1 && arr1[i]!=minm)
+//     {minm_1=arr1[i];
+//         /* code */
+//     }
+    
+    
+//     /* code */
+// }
+
+
+// cout<<maxm<<maxm_1<<minm<<minm_1;
+
+// }
+
+//maxm consecutive 1
+// int main(){
+// vector<int> arr1 = {1,0,1,1,0,1};
+// int first1=-1;
+// int times=0;
+// int temp=0;
+// for (int i = 0; i < arr1.size(); i++)
+// {if (arr1[i]==1)
+// {first1=i;
+//     /* code */
+// } /* code */
+// }
+// if (first1==-1)
+// {return 0;
+//     /* code */
+// }
+// for (int i = 0; i <arr1.size(); i++)
+// {
+  
+//     if (arr1[i]==1 )
+//     {temp++;
+//         /* code */
+//     }
+
+     
+    
+
+//     if (arr1[i]!=1)
+//     {times=max(times,temp);
+//         temp=0;
+//         /* code */
+//     }
+//     else if (i==arr1.size()-1)
+// {times=max(times,temp);
+//     /* code */
+// }
+
+//     /* code */
+// }
+
+
+
+// }
+// int main(){
+// vector<int> nums={2,2,1};
+// int ind=-1;
+// for (int i = 0; i < nums.size()-1; i++)
+// {
+//     for (int j = i+1; j < nums.size() ; j++)
+//     {
+//         if (nums[i]==nums[j])
+//         {nums[i]=-1;
+//             nums[j]=-1;
+//             break;
+//             /* code */
+//         }
+        
+//     }
+    
+//     /* code */
+// }
+// for (int i = 0; i < nums.size(); i++)
+// {if (nums[i]!=-1)
+// {cout<<nums[i];
+//     /* code */
+// }
+
+//     /* code */
+// }
+
+
+
+// }
+// //hashmap method
+// int main(){
+// vector<int> nums={4,1,2,1,2};
+// int maxel=nums[0];
+
+// for (int i = 0; i < nums.size(); i++)
+// {maxel=max(maxel,nums[i]);
+// }
+// vector<int> has(maxel,0);
+
+// for (int i = 0; i < nums.size(); i++)
+// {has[nums[i]]++;
+
+//     /* code */
+// }
+
+// for (int i = 0; i < nums.size(); i++)
+// {
+//     if (has[nums[i]]==1)
+//     {
+//         cout<<nums[i];
+//         /* code */
+//     }
+    
+
+//     /* code */
+// }
+// }
+//using xor
+// int main(){
+// vector<int> b={1,2,2,1,5};
+// int xor_ans=0;
+// for (int i = 0; i < b.size(); i++)
+// {
+//     xor_ans=xor_ans^b[i];
+//     /* code */
+// }
+// cout<<xor_ans;
+
+// }
+// int main(){
+//     vector<int> b={10, 5, 2, 7, 0,1, 9};
+//    int  k=15;
+//    int mn=0;
+//    int size_=b.size();
+//     int left=0;
+//     int right=0;
+//     int sum=b[left];
+//     while (left<size_)
+//     {
+//         while (left<=right && sum<k && right<size_)
+//         {right++;
+//             cout<<909<<endl;
+//             sum+=b[right];
+//          /* code */
+//         }
+//         if (sum==k)
+//         {cout<<right<<" "<<left<<endl;
+//             mn=max(mn,right-left+1);
+//             /* code */cout<<mn<<":mn"<<endl;
+//         }
+        
+//         if (left<size_)
+//         {sum-=b[left];
+//             /* code */
+//         }
+//         left++;
+        
+        
+
+
+
+
+
+//         /* code */
+//     }
+    
+
+    
+//     /* code */
+//    cout<<mn;
+
+// }
+//longest subarray with 0sum
+// int main(){
+// vector<int> b={6, -2, 2, -8, 1, 7, 4, -10};int maxima=b.size();
+// int leng=0;
+// for (int i = 0; i < maxima; i++)
+// {int sum=0;
+//     for (int j = i; j < maxima; j++)
+//     {sum+=b[j];
+//         if (sum==0)
+//         {leng=max(leng,j-i+1);
+//             /* code */
+//         }
+        
+
+//         /* code */
+//     }
+    
+//     /* code */
+// }
+// cout<<leng;
+
+
+
+// }
+//cant use this sliding window logic as numbers arent posititve
+// int main(){
+// vector<int> b={6, -2, 2, -8, 1, 7, 4, -10};
+// int maxima=b.size();
+// int left=0;
+// int right=0;
+// int sum=b[0];
+// int ans=0;
+// while (right<maxima)
+// {
+//     while (left<=right && sum>0)
+//     {sum-=b[left];
+//         left++;
+//         /* code */
+//     }
+//     if (sum==0)
+//     {ans=max(ans,right-left+1);
+//         /* code */
+//     }
+//     right++;
+//     if (right<maxima  )
+//     {sum+=b[right];
+//         /* code */
+//     }
+    
+
+//     /* code */
+// }
+
+// cout<<ans;
+// }
+//two sum using nested loop
+// int main(){int target=13;
+// vector<int> b={6, -2, 2, -8, 1, 7, 4, -10};
+// for (int i = 0; i < b.size(); i++)
+// {
+//     for (int j = i; j < b.size(); j++)
+//     {if (b[i]+b[j]==target)
+//     {cout<<b[i]<<" "<<b[j];
+//         /* code */
+//     }
+    
+//         /* code */
+//     }
+    
+//     /* code */
+// }
+// }
+//using hashmap
+// int main(){
+
+// vector<int> b={6, -2, 2, -8, 1, 7, 4, -10};
+// int lengthh=b.size();
+// int target=13;
+// unordered_map <int,int> hashh;
+// for (int i = 0; i < lengthh; i++)
+// {   if (hashh.find(target-b[i]) !=hashh.end()){
+//     cout<<target-b[i]<<" "<<b[i]<<endl;
+//        cout<<hashh[target-b[i]]<<" "<<i<<endl;break;
+//  }
+//   hashh[b[i]]=i;
+//     // cout<<":before:"<<i<<" "<<hashh[b[i]]<<endl;
+//     //         cout<<i<<" "<<hashh[b[i]]<<":after:"<<endl;
+
+// }
+// }
+//using sorting then two pointer
+// int main(){
+//     vector<int> b={6, -2, 2, -8, 1, 7, 4, -10};
+//     sort(b.begin(),b.end());
+//     for(int i : b){cout<<i<<" "<<endl;}
+//     int left=0;int right=b.size()-1;
+//     int target=13;
+//     while(left<right){
+//         int temp=b[left]+b[right];
+//         if (temp==target)
+//         {cout<<"----"<<left<<" "<<right;break;
+//             /* code */
+//         }
+//         if (temp<target)
+//         {left++;
+            
+//             /* code */
+//         }
+//         else if(temp>target){
+            
+            
+//             right--;
+
+//         }
+        
+        
+
+
+//     }
+// }
+//sort colors
+class Solution {
+public://012
+    void sortColors(vector<int>& nums) {
+        // int startfor1=0;
+        // for (int i = 0; i < nums.size(); i++)
+        // {
+        //     if (nums[i]!=0)
+        //     {int j=i+1;
+        //         while (nums[j]!=0 && j != nums.size())
+        //         {j++;
+        //             /* code */
+        //         }
+        //         if (nums[i]!=0 && nums[j]==0)
+        //         {swap(nums[i],nums[j]);
+        //             startfor1=i+1;
+        //             /* code */
+        //         }
+                
+        //         /* code */
+        //     }
+        // }
+
+        //      for (int i = startfor1; i < nums.size(); i++)
+        // {
+        //     if (nums[i]!=1)
+        //     {int j=i+1;
+        //         while (nums[j]!=1 && j != nums.size())
+        //         {j++;
+        //             /* code */
+        //         }
+        //         if (nums[i]!=1 && nums[j]==1)
+        //         {swap(nums[i],nums[j]);
+        //             /* code */
+        //         }
+                
+        //         /* code */
+        //     }
+            
+        //     /* code */
+        // }
+        
+        //::using Dutch national flag algo
+
+        int low=0,mid=0,high=nums.size()-1;
+        while(mid<=high)//once mid crosses high it means we have got into range of 2 hence end sorting
+                //our partitions look like this: 0th index--->low : 0
+                                            //   low+1--->mid : 1
+                                            //      mid+1-->high:unsorted
+                                            //high--->end : 2
+        {
+            if (nums[mid]==0)
+            {swap(nums[low],nums[mid]);
+                low++;mid++;
+                //why mid++ why theres need to do mid++, as if theres an (previously at low)element which got swapped with mid now mids value changed now isnt there need to check if mids elemnt need to shifted,btw this is dnf algo
+                //becoz:case 1 elemnt at ow is 0 in that case its where it was suppose tobe so mid++
+                    //case 2 elmt=1 still mid++makes sense
+                    //case 3 elmt=2 never happens aas if 2 was previously encountered it got swapped with high
+                /* code */
+            }
+            else if (nums[mid]==2)
+            {swap(nums[high],nums[mid]);
+               high--;
+                /* code */
+            }
+            else
+            {mid++;
+                /* code */
+            }
+            
+
+
+        }
+
+
+
+    }
+};
+int main(){
+ Solution sol;
+ vector<int> b={2,0,2,1,0,1,1,1,2,2,1,1,0,2,1,1,0};
+sol.sortColors(b);
+for (int i = 0; i < b.size(); i++)
+{cout<<b[i]<<" ";
+    /* code */
+}
+
+
+
+
+}
